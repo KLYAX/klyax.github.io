@@ -1,4 +1,0 @@
-// переводит px ($target) в em основываясь на контексте ($context)
-@function em($target, $context: 16px) {
-  @return $target / $context * 1em;
-}

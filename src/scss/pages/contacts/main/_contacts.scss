@@ -1,7 +1,0 @@
-.contacts-main-contacts {
-  $item_margin-bottom: rem(15px);
-
-  &__item:not(:last-child) {
-    margin-bottom: $item_margin-bottom;
-  }
-}

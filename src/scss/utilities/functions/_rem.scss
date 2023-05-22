@@ -1,4 +1,0 @@
-// переводит px ($target) в rem основываясь на контексте ($context)
-@function rem($target, $context: 16px) {
-  @return $target / $context * 1rem;
-}

@@ -1,0 +1,30 @@
+/**
+ * Подключает шрифт с именем $name, который находятся по пути $path с жирностью $weight
+ * со стилем $style и в пути к файлу имеет расширения $exts
+ */
+@mixin font-face($name, $path, $weight: null, $style: normal, $exts: ttf eot woff2 woff) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_"),
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype",
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}

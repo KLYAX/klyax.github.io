@@ -1,0 +1,17 @@
+.advantages-slider {
+  $this_margin-top: rem(-10px);
+  $this_margin-top_min-xl: rem(-15px);
+
+  // margin-top: $this_margin-top;
+
+  &__slides {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  @include media-min(xl) {
+    margin-top: $this_margin-top_min-xl;
+  }
+}

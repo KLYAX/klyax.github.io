@@ -1,0 +1,47 @@
+// создает линию которая отделает контент
+$block-divider_weight: 1px;
+$block-divider_color: $color-gray-l-88;
+$block-divider_shadow-border-bottom: inset 0 (-$block-divider_weight) 0 0 $block-divider_color;
+
+.block-divider {
+  box-shadow: $block-divider_shadow-border-bottom;
+}
+
+// необходим для поддержки свойства position со значением sticky в ie11
+.sticky {
+  position: sticky;
+
+  top: 0;
+
+  @include media-max(xl) {
+    position: static;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+}
+
+// отключает анимации на уже анимированном элементе
+.animated {
+  transition: none !important;
+}
+
+// селектор для анимации выезжания элемента снизу
+.content-appear-slide-up {
+  overflow: hidden;
+
+  html.sr & {
+    visibility: hidden;
+  }
+}
+
+.swiper-content-slide-up-effect {
+  overflow: hidden;
+}
+
+.span {
+  display: inline-block;
+}

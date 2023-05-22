@@ -1,0 +1,38 @@
+.manufacture-main {
+  $this_margin-bottom: rem(90px);
+
+  $header_margin-bottom: rem(75px);
+
+  $this_max-xl_margin-bottom: rem(84px);
+  $this_max-sm_margin-bottom: rem(48px);
+
+  $header_max-xl_margin-bottom: rem(97px);
+  $header_max-sm_margin-bottom: rem(36px);
+
+  margin-bottom: $this_margin-bottom;
+
+  &__header {
+    margin-bottom: $header_margin-bottom;
+  }
+
+  @include media-max(xl) {
+    margin-bottom: $this_max-xl_margin-bottom;
+
+    &__header {
+      margin-bottom: $header_max-xl_margin-bottom;
+    }
+  }
+
+  @include media-max(sm) {
+    margin-bottom: $this_max-sm_margin-bottom;
+
+    &__header {
+      margin-bottom: $header_max-sm_margin-bottom;
+    }
+
+    &__slide-switcher {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.reviews {
+  $this_padding-top: rem(60px);
+  $this_padding-top_min-md: rem(100px);
+  $this_padding-top_min-xl: rem(120px);
+
+  $this_padding-bottom: rem(165px);
+  $this_padding-bottom_min-md: rem(190px);
+  $this_padding-bottom_min-xl: rem(257px);
+
+  $header_margin-bottom: rem(70px);
+  $header_margin-bottom_min-md: rem(50px);
+  $header_margin-bottom_min-xl: rem(70px);
+
+  $controls_margin-bottom_min-md: rem(57px);
+  $controls_margin-bottom_min-xl: rem(42px);
+
+  $title-container_margin-bottom: rem(25px);
+
+  $slide-switch_margin-bottom: rem(78px);
+
+  padding: $this_padding-top 0 $this_padding-bottom;
+
+  &__header {
+    margin-bottom: $header_margin-bottom;
+  }
+
+  &__body-inner {
+    position: relative;
+  }
+
+  &__controls {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+  }
+
+  &__slide-switch {
+    margin-bottom: $slide-switch_margin-bottom;
+  }
+
+  &__slide-switch,
+  &__slider-pagination {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @include media-max(xs) {
+    &__title-container {
+      margin-bottom: $title-container_margin-bottom;
+    }
+
+    &__title-container,
+    &__description-container {
+      display: block;
+
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+
+  @include media-max(md) {
+    &__controls {
+      z-index: 2;
+    }
+  }
+
+  @include media-min(md) {
+    padding: $this_padding-top_min-md 0 $this_padding-bottom_min-md;
+
+    &__header {
+      margin-bottom: $header_margin-bottom_min-md;
+    }
+    &__controls {
+      margin-bottom: $controls_margin-bottom_min-md;
+    }
+
+    &__controls {
+      position: static;
+    }
+
+    &__slide-switch,
+    &__slider-pagination {
+      display: block;
+    }
+
+    &__slide-switch {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-min(xl) {
+    padding: $this_padding-top_min-xl 0 $this_padding-bottom_min-xl;
+
+    &__header {
+      margin-bottom: $header_margin-bottom_min-xl;
+    }
+
+    &__controls {
+      margin-bottom: $controls_margin-bottom_min-xl;
+    }
+
+    .title {
+      font-size: $title-section-main_font-size;
+    }
+  }
+}

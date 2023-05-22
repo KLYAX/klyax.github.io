@@ -1,0 +1,36 @@
+.control-cabinets-slider {
+  $this_z-index: 125;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  user-select: none;
+
+  z-index: $this_z-index;
+
+  &__slides {
+    display: flex;
+
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+  }
+
+  @include media-max(xl) {
+    max-height: rem(450px);
+  }
+  @include media-max(sm) {
+    max-height: rem(330px);
+  }
+}

@@ -1,0 +1,131 @@
+.home-hero-sub-nav {
+  $this_margin-bottom: rem(36px);
+  $this_margin-bottom_min-sm: rem(84px);
+  $this_margin-bottom_min-lg: 0;
+
+  $header_margin-bottom: rem(25px);
+  $header_margin-bottom_min-sm: rem(22px);
+  $header_margin-bottom_min-lg: rem(30px);
+
+  $title_font-size: rem(30px);
+  $title_font-size_min-sm: rem(60px);
+  $title_font-size_min-xl: rem(70px);
+
+  $title-icon_margin-bottom: em(3.3px);
+
+  $list_max-width_min-xl: rem(400px);
+
+  $item_height: rem(19px);
+  $item_margin-bottom: rem(15px);
+  $item_margin-bottom_min-sm: rem(15px);
+  $item_margin-bottom_min-xl: rem(15px);
+
+  margin-bottom: $this_margin-bottom;
+
+  &__header {
+    margin-bottom: $header_margin-bottom;
+  }
+
+  &__title-inner {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__title-content {
+    display: inline-block;
+  }
+
+  &__title-text {
+    white-space: pre-wrap;
+    white-space: break-spaces;
+  }
+
+  .transition-item .slide-up-enter-active &__link {
+    transition-duration: 0s;
+  }
+
+  &__title-icon {
+    margin-bottom: $title-icon_margin-bottom;
+  }
+
+  &__link {
+    padding: 0;
+  }
+
+  &__item {
+    height: $item_height;
+    display: flex;
+    align-items: center;
+    margin-bottom: $item_margin-bottom;
+  }
+
+  @include media-min(sm) {
+    margin-bottom: $this_margin-bottom_min-sm;
+
+    &__header {
+      margin-bottom: $header_margin-bottom_min-sm;
+    }
+
+    &__title {
+      font-size: $title_font-size_min-sm;
+    }
+
+    &__item {
+      margin-bottom: $item_margin-bottom_min-sm;
+    }
+  }
+
+  @include media-min(lg) {
+    margin-bottom: $this_margin-bottom_min-lg;
+
+    &__header {
+      margin-bottom: $header_margin-bottom_min-lg;
+    }
+
+    &__list {
+      margin-bottom: -$item_margin-bottom_min-xl;
+    }
+
+    &__item {
+      margin-bottom: $item_margin-bottom_min-xl;
+    }
+  }
+
+  @include media-min(xl) {
+    &__title {
+      font-size: $title_font-size_min-xl;
+    }
+
+    &__list {
+      max-width: $list_max-width_min-xl;
+    }
+  }
+
+  @include media-max(xs) {
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+
+  @media (orientation: landscape) and (max-height: 414px) {
+    margin-bottom: rem(15px);
+
+    &__header {
+      margin-bottom: rem(15px);
+    }
+
+    &__item {
+      margin-bottom: rem(10px);
+    }
+
+    &__link {
+      font-size: rem(15px);
+    }
+  }
+}

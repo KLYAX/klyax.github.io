@@ -1,0 +1,114 @@
+$type_font-family: $font-family-gl-interstate;
+$type_font-weight: $font-weight-bold;
+$type_font-size: rem(14px);
+$type_line-height: $line-height-sm;
+$type_color: $secondary-color;
+$type_transition: $transition-medium-ease;
+$type_transform-origin: bottom left;
+
+$type-active_color: $primary-color;
+$type-active_transform: scale(1.57142);
+
+.control-cabinets-product-types-nav {
+  $type_font-family: $font-family-gl-interstate;
+  $type_font-weight: $font-weight-bold;
+  $type_font-size: rem(14px);
+  $type_line-height: $line-height-sm;
+  $type_color: $secondary-color;
+
+  $type_transition: $transition-medium-ease;
+  $type_transform-origin: bottom left;
+
+  $type-active_color: $primary-color;
+  $type-active_transform: scale(1.57142);
+
+  position: relative;
+
+  flex: 1 1 100%;
+
+  user-select: none;
+
+  overflow: hidden;
+
+  &__list {
+    position: relative;
+
+    height: 33px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__list-item {
+    padding: 0 rem(10px);
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+
+    @include media-max(md) {
+      flex: 0 0 auto;
+      width: 60vw;
+      padding: 0 $container_padding-x_min-sm;
+
+      &:last-child {
+        width: 100vw;
+      }
+    }
+
+    @include media-max(sm) {
+      width: 80vw;
+
+      padding: 0 $container_padding-x;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $type_font-family;
+    font-weight: $type_font-weight;
+    font-size: $type_font-size;
+    line-height: $type_line-height;
+    color: $type_color;
+    transition: $type_transition;
+    transform-origin: $type_transform-origin;
+
+    &_active {
+      color: $type-active_color;
+      // transform: $type-active_transform;
+    }
+
+    &:hover {
+      color: $type-active_color;
+    }
+  }
+
+  &__sliding-line {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    height: $tabs-sliding-line_weight;
+    background-color: $tabs-sliding-line_background-color;
+
+    will-change: transition, width;
+  }
+
+  @include media-max(md) {
+    padding: 0;
+
+    &__list {
+      flex-wrap: nowrap;
+    }
+  }
+
+  @include media-min(md) {
+    &__list {
+      margin: 0 rem(-10px) 0 rem(-10px);
+    }
+  }
+}

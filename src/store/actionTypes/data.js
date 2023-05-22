@@ -1,0 +1,1 @@
+export const SET_FACILITIES = "SET_FACILITIES";

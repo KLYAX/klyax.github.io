@@ -1,0 +1,38 @@
+.products-use-cases-statistic-accordion {
+  $this_margin-top: rem(15px);
+
+  $summary_font-family: $font-family-gl-interstate;
+  $summary_font-size: rem(18px);
+  $summary_font-weight: 600;
+
+  $header-inner_padding: rem(10px);
+  $toggle_right: $header-inner_padding / 2;
+
+  $body-inner_max-sm_padding-bottom: rem(55px);
+
+  &__body-inner {
+    padding-bottom: 0;
+  }
+
+  & + & {
+    margin-top: $this_margin-top;
+  }
+
+  &__summary {
+    font-family: $summary_font-family;
+    font-size: $summary_font-size;
+    font-weight: $summary_font-weight;
+  }
+
+  &__toggle {
+    right: $toggle_right;
+  }
+
+  &__header-inner {
+    padding: $header-inner_padding;
+  }
+
+  &:not(:last-child) &__body-inner {
+    padding-bottom: $body-inner_max-sm_padding-bottom;
+  }
+}

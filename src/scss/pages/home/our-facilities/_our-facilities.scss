@@ -1,0 +1,146 @@
+.our-facilities {
+  $this_padding-y: rem(165px);
+  $this_padding-y_min-md: rem(190px);
+  $this_padding-y_min-xl: rem(260px);
+
+  $header_margin-bottom: rem(51px);
+  $header_margin-bottom_min-md: rem(90px);
+
+  $list_margin-bottom: rem(75px);
+  $list_margin-bottom_min-md: rem(50px);
+  $list_margin-bottom_min-lg: rem(60px);
+
+  $title-container_margin-bottom: rem(49px);
+  $title-container_margin-bottom_min-md: rem(50px);
+  $title-container_margin-bottom_min-lg: rem(61px);
+
+  $view-all-container_margin-bottom: rem(49px);
+  $view-all-container_margin-bottom_min-lg: rem(49px);
+
+  $description-container_margin-bottom: rem(49px);
+
+  padding: $this_padding-y 0;
+
+  &__title-container {
+    margin-bottom: $title-container_margin-bottom;
+  }
+
+  &__view-all-container {
+    display: flex;
+
+    margin-bottom: $view-all-container_margin-bottom;
+
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  &__description-container {
+    margin-bottom: $description-container_margin-bottom;
+  }
+
+  &__header {
+    margin-bottom: $header_margin-bottom;
+  }
+
+  &__list {
+    margin: 0 0 $list_margin-bottom 0;
+
+    list-style: none;
+  }
+
+  &__more {
+    text-align: right;
+  }
+
+  &__more-link {
+    white-space: nowrap;
+  }
+
+  &__container-with-all-facilities-link {
+    text-align: right;
+  }
+
+  @include media-max(lg) {
+    &__list {
+      padding: 0;
+    }
+  }
+
+  @include media-max(374px) {
+    &__title-container {
+      margin-bottom: rem(24px);
+    }
+
+    &__title-container,
+    &__view-all-container {
+      display: block;
+
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+
+  @include media-min(md) {
+    padding: $this_padding-y_min-md 0;
+
+    &__header {
+      margin-bottom: $header_margin-bottom_min-md;
+    }
+
+    &__list {
+      margin-bottom: $list_margin-bottom_min-md;
+    }
+
+    &__title-container {
+      margin-bottom: $title-container_margin-bottom_min-md;
+    }
+
+    &__view-all-container {
+      margin-bottom: 0;
+
+      display: block;
+
+      text-align: right;
+    }
+
+    &__description-container {
+      margin-bottom: 0;
+    }
+
+    &__view-all {
+      line-height: 1;
+    }
+  }
+
+  @include media-min(lg) {
+    &__list {
+      margin-bottom: $list_margin-bottom_min-lg;
+    }
+
+    &__more {
+      text-align: left;
+    }
+
+    &__view-all-container {
+      display: flex;
+
+      margin-bottom: $view-all-container_margin-bottom_min-lg;
+    }
+
+    &__favorite-works-counter {
+      line-height: 1;
+    }
+  }
+
+  @include media-min(xl) {
+    padding: $this_padding-y_min-xl 0;
+
+    .title {
+      font-size: $title-section-main_font-size;
+    }
+
+    &__container-with-all-facilities-link {
+      text-align: left;
+    }
+  }
+}

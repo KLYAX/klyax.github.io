@@ -1,0 +1,39 @@
+// Контакт
+
+.contact {
+  $content-medium_font-size: rem(18px);
+  $content-large_font-size: rem(24px);
+
+  $content_font-weight: $font-weight-bold;
+  $content_font-family: $font-family-anonymous-pro;
+  $content-light_color: $theme-light-text-primary-color;
+
+  $label_font-size: rem(17px);
+  $label_color: $color-gray-chateau;
+  $label_line-height: $line-height-sm;
+  $label_margin-bottom: rem(7px);
+  $label_font-family: $font-family-anonymous-pro;
+
+  &__content {
+    font-weight: $content_font-weight;
+    font-family: $content_font-family;
+    white-space: nowrap;
+    display: inline-block;
+
+    &_medium {
+      font-size: $content-medium_font-size;
+    }
+
+    &_large {
+      font-size: $content-large_font-size;
+    }
+  }
+
+  &__label {
+    font-family: $label_font-family;
+    font-size: $label_font-size;
+    color: $label_color;
+    line-height: $label_line-height;
+    margin-bottom: $label_margin-bottom;
+  }
+}

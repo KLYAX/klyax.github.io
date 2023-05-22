@@ -1,0 +1,52 @@
+.advantages-nav {
+  $nav-link-active_scale: 1.48;
+  $nav-link-active_scale_min-420: 2.1875;
+  $nav-link-active_scale_min-sm: 1.25;
+
+  // убирает блюр во время увелечения текста
+  // с помощью свойства transform: scale
+  //
+  // не используется на самом элементе .nav__link-label,
+  // так как если элемент изначально не был увеличен,
+  // тогда после применения увелечения элемент становится заблюренным
+  .nav__link:not(.active) .nav__link-label {
+    will-change: transform;
+  }
+
+  .nav__link.active > .nav__link-label {
+    transform: scale($nav-link-active_scale);
+
+    font-family: $font-family-gl-interstate;
+
+    text-indent: -1px;
+  }
+
+  .nav__link-label {
+    transform-origin: left center;
+    transition: $transition-slow-ease;
+
+    font-family: $font-family-gl-interstate;
+    text-transform: uppercase;
+  }
+
+  @include media-min(480px) {
+    .nav__link.active > .nav__link-label {
+      transform: scale($nav-link-active_scale_min-420);
+    }
+  }
+
+  @include media-min(md) {
+    .nav__link.active > .nav__link-label {
+      transform: scale($nav-link-active_scale_min-sm);
+
+      font-family: $font-family-anonymous-pro;
+
+      text-indent: unset;
+    }
+
+    .nav__link-label {
+      font-family: $font-family-anonymous-pro;
+      text-transform: none;
+    }
+  }
+}

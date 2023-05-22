@@ -1,0 +1,20 @@
+.manufacture {
+  $this_padding: rem(110px) 0 rem(180px);
+
+  $this_max-xl_padding: rem(124px) 0 rem(185px);
+  $this_max-sm_padding: rem(60px) 0 rem(133px);
+
+  padding: $this_padding;
+
+  @include media-max(xl) {
+    padding: $this_max-xl_padding;
+  }
+
+  @include media-max(sm) {
+    padding: $this_max-sm_padding;
+    &__slide-switcher {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

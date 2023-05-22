@@ -1,0 +1,135 @@
+.products-nav-group-preview {
+  // height: 156px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+
+  &__list {
+    min-width: 100%;
+    width: 100%;
+    max-width: none;
+
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: table;
+    table-layout: fixed;
+  }
+
+  &__list:hover &__item {
+    width: 8%;
+  }
+
+  &__list:hover &__item:hover {
+    width: 60%;
+  }
+
+  &__item {
+    display: table-cell;
+    vertical-align: bottom;
+    position: relative;
+    width: 16.666%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all 500ms ease;
+    will-change: width;
+  }
+
+  &__item:not(:last-child) {
+    border-right: 1px solid #b9b9b9;
+  }
+
+  // $previews: ".products-nav-group__previews";
+
+  // $image-container_background-color: $color-gray-l-77;
+  // $this_height: rem(190px);
+  // $this_height_min-md: rem(165px);
+  // $this_height_min-xl: rem(160px);
+
+  // height: $this_height;
+
+  // position: relative;
+  // transition: all 0.3s linear;
+
+  // overflow: hidden;
+
+  // &__image-container {
+  //   position: absolute;
+
+  //   max-height: 100%;
+  //   height: 100%;
+  //   // top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+
+  //   margin: auto;
+
+  //   overflow: hidden;
+
+  //   background-color: $image-container_background-color;
+  //   transition: transform 0.45s ease-out;
+  // }
+
+  // &__image {
+  //   margin: 0 auto;
+  // }
+
+  // #{$previews} &:first-child &__image {
+  //   transform: translate(-30%, 25%);
+  // }
+
+  // #{$previews} &:last-child &__image {
+  //   transform: translateY(50%);
+  // }
+
+  // #{$previews} &:first-child:hover ~ & {
+  //   transform: translateX(10%);
+  // }
+
+  // #{$previews} &:hover &__image-container {
+  //   transform: translateX(-5%);
+  // }
+
+  // #{$previews} &:last-child:hover {
+  //   transform: translateX(-10%);
+  // }
+
+  // #{$previews} &:last-child:hover &__image-container {
+  //   transform: translateX(-5%);
+  // }
+
+  // @include media-min(md) {
+  //   height: $this_height_min-md;
+  // }
+
+  // @include media-min(xl) {
+  //   height: auto; //$this_height_min-xl;
+
+  //   &:after {
+  //     content: "";
+
+  //     display: block;
+
+  //     padding-top: percentage(156 / 330);
+  //   }
+
+  //   &__image {
+  //     width: 100%;
+  //   }
+
+  //   #{$previews} &:first-child &__image {
+  //     width: 30%;
+  //     transform: translate(-30%, 15%);
+  //   }
+
+  //   #{$previews} &:last-child &__image {
+  //     width: 50%;
+  //   }
+  // }
+}

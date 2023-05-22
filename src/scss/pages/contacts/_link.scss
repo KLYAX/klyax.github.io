@@ -1,0 +1,19 @@
+.contacts-link {
+  $this_font-family: $font-family-gl-interstate;
+  $this_font-weight: $font-weight-bold;
+  $this_font-size: rem(16px);
+  $this-md_font-size: rem(18px);
+
+  display: block;
+  font-family: $this_font-family;
+  font-weight: $this_font-weight;
+  font-size: $this_font-size;
+  color: inherit;
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  &_md {
+    font-size: $this-md_font-size;
+  }
+}

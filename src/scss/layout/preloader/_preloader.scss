@@ -1,0 +1,21 @@
+.preloader {
+  $this_background-color: $background-color-base;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+
+  background-color: $this_background-color;
+
+  z-index: 150;
+
+  display: flex;
+}

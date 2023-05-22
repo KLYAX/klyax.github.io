@@ -1,0 +1,40 @@
+.header-menu {
+  $this_margin-left: rem(20px);
+  $this_margin-left_min-md: rem(60px);
+
+  $toggle_padding: rem(10px) 0;
+  $toggle_z-index: 2;
+
+  $toggle-active_color: $primary-color;
+  $menu_z-index: 1;
+
+  margin-left: $this_margin-left;
+
+  .light &__toggle .burger-icon {
+    color: $theme-light-text-primary-color;
+  }
+
+  .light &__toggle .burger-icon.active {
+    color: $toggle-active_color;
+  }
+
+  display: flex;
+  justify-content: flex-end;
+
+  &__toggle {
+    padding: $toggle_padding;
+    z-index: $toggle_z-index;
+  }
+
+  &__menu {
+    z-index: $menu_z-index;
+  }
+
+  @include media-min(md) {
+    margin-left: $this_margin-left_min-md;
+  }
+
+  @include media-min(xl) {
+    display: none;
+  }
+}

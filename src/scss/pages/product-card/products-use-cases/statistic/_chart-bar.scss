@@ -1,0 +1,74 @@
+.products-use-cases-statistic-chart-bar {
+  $this_background-color: $color-gray-l-23;
+
+  $label_padding: rem(5px) rem(10px);
+  $label_color: $color-white;
+  $label_line-height: $line-height-sm;
+  $label_font-family: $font-family-anonymous-pro;
+
+  position: relative;
+
+  width: 100%;
+  height: 0;
+
+  background-color: $this_background-color;
+
+  &:after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    padding: $label_padding;
+
+    color: $label_color;
+    line-height: $label_line-height;
+    font-family: $label_font-family;
+  }
+
+  &_acceptable {
+    height: 20%;
+
+    @include media-max(sm) {
+      height: 40%;
+    }
+
+    &:after {
+      content: "допустимо";
+    }
+  }
+
+  &_good {
+    height: 40%;
+
+    @include media-max(sm) {
+      height: 55%;
+    }
+
+    &:after {
+      content: "хорошо";
+    }
+  }
+
+  &_well {
+    height: 60%;
+
+    @include media-max(sm) {
+      height: 70%;
+    }
+
+    &:after {
+      content: "отлично";
+    }
+  }
+
+  &_excellent {
+    height: 80%;
+
+    &:after {
+      content: "идеально";
+    }
+  }
+}

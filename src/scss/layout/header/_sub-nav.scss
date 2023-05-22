@@ -1,0 +1,68 @@
+.header-sub-nav {
+  $this_transition: $transition-medium-ease;
+
+  $underlay_background-color: transparentize($color-black, 0.5);
+
+  $container_padding-top: $header_height + rem(40px);
+  $container_padding-top_min-md: $header_height + rem(50px);
+  $container_padding-top_min-xl: $header_height + rem(45px);
+
+  $container_padding-bottom: rem(95px);
+
+  $container_background-color: $background-color-base;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: $this_transition;
+  visibility: hidden;
+  opacity: 0;
+  // убираем события при наведении так как после того как навигация пропадает, есть возможность опять активировать ее при наведении на область где она была
+  pointer-events: none;
+
+  .header:not(.header--disable-sub-nav-on-hover) .header-nav__item:hover > & {
+    visibility: visible;
+    opacity: 1;
+    // возвращаем события при наведении так как нам больше не нужно прятать меню при наведении на него, так как оно в активном состоянии
+    pointer-events: unset;
+  }
+
+  &__body {
+    display: flex;
+    max-height: 80vh;
+
+    padding-bottom: $container_padding-bottom;
+    padding-top: $container_padding-top;
+    background-color: $container_background-color;
+  }
+
+  &__body-container {
+    overflow-y: auto;
+  }
+
+  &__underlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    // при наведении на этот элемент отключаем hover у элемента через который была активирована навигация
+    pointer-events: none;
+    background-color: $underlay_background-color;
+  }
+
+  @include media-min(md) {
+    &__body {
+      padding-top: $container_padding-top_min-md;
+    }
+  }
+
+  @include media-min(xl) {
+    &__body {
+      padding-top: $container_padding-top_min-xl;
+    }
+  }
+}

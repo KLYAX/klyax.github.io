@@ -1,0 +1,42 @@
+.home-hero-nav {
+  $this: &;
+
+  $item_margin-bottom: rem(5px);
+
+  $link-active_color: $color-gray-l-23;
+
+  margin-top: -$nav-link_padding-y;
+
+  &__link-label {
+    transition: inherit;
+    display: inline-block;
+  }
+
+  &__link {
+    transform-origin: left center;
+
+    backface-visibility: hidden;
+    &.active {
+      color: $link-active_color;
+
+      transform: scale(1.25) translate3d(0, 0, 0);
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+  }
+
+  &__list {
+    #{$this}__item:not(:last-child) {
+      margin-bottom: $item_margin-bottom;
+    }
+  }
+
+  @media (orientation: landscape) and (max-height: 414px) {
+    &__link {
+      font-size: rem(15px);
+      padding: rem(2.5px) 0;
+    }
+  }
+}

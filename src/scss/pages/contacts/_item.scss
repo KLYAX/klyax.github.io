@@ -1,0 +1,28 @@
+.contacts-item {
+  $header_margin-bottom: rem(5px);
+  $caption_font-size: rem(15px);
+  $meta_font-family: $font-family-gl-interstate;
+  $meta_font-size: rem(16px);
+
+  &__header {
+    margin-bottom: $header_margin-bottom;
+  }
+
+  &__caption {
+    text-indent: 1px;
+    font-size: $caption_font-size;
+    white-space: pre-line;
+  }
+
+  &__meta {
+    font-family: $meta_font-family;
+    font-size: $meta_font-size;
+    white-space: pre-line;
+  }
+
+  @include media-min(lg) {
+    &:not(:last-child) {
+      margin-bottom: rem(25px);
+    }
+  }
+}

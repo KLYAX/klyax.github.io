@@ -1,0 +1,26 @@
+.advantages-nav {
+  .nav__link-label {
+    transform-origin: left center;
+    transition: $transition-slow-ease;
+
+    @include media-max(sm) {
+      font-family: $font-family-gl-interstate;
+      text-transform: uppercase;
+    }
+  }
+
+  .nav__link_active > .nav__link-label {
+    transform: scale(1.25);
+
+    @include media-max(sm) {
+      font-family: $font-family-gl-interstate;
+      transform: scale(2.1875);
+
+      text-indent: -1px;
+    }
+
+    @include media-max(420px) {
+      transform: scale(1.5);
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "Globe": "Глобус",
+
+  "Home": "Главная",
+  "Products": "Продукция",
+  "Documentation": "Документация",
+  "Our facilities": "Наши объекты",
+  "About": "О компании",
+  "Contacts": "Контакты",
+
+  "Down to": "Вниз к",
+  "Up to": "Вверх к",
+
+  "Partners": "Партнеры",
+  "Reviews": "Отзывы",
+
+  "Safety": "Безопасность",
+  "Guarantee": "Гарантия",
+  "Details": "Детали",
+
+  "View all": "Посмотреть все",
+  "All facilities": "Все объекты",
+  "Selected works": "Избранные работы",
+
+  "Globus group of companies": "Группа компаний\nглобус",
+  "Technical documentation": "Техническая документация",
+  "Product catalogs": "Каталоги продукции",
+  "Certificates": "Сертификаты",
+  "Working hours": "Режим работы",
+
+  "Electronics": "Электроника",
+  "Control cabinets": "Шкафы управления",
+  "Pumping stations": "Насосные станции",
+  "Block-containers": "Блок-контейнеры",
+  "Control controllers": "Контроллеры управления",
+
+  "Water supply": "Водоснабжение",
+  "Drainage": "Водоотведение",
+  "Firefighting": "Пожаротушение",
+  "Controllers": "Контроллеры",
+  "Electronic thing": "Электронная штука",
+
+  "Privacy policy": "Политика конфиденциальности",
+
+  "Roscosmos": "Роскосмос",
+  "Lukoil": "Лукойл",
+  "Yandex": "Яндекс",
+  "Sochiteploenergo": "Сочитеплоэнерго",
+  "Metro": "Метро",
+
+  "Amur region": "Амурская область",
+  "Budennovsk": "г. Буденновск",
+  "Vladimir": "г. Владимир",
+  "Sochi": "г. Сочи",
+
+  "Vostochny cosmodrome": "Космодром восточный",
+  "OOO Stavrolen | Lukoil OJSC": "ООО Ставролен\n| ОАО Лукойл",
+  "Yandex data center": "Центр обработки данных Яндекс",
+  "MUP Sochiteploenergo": "МУП Сочитеплоэнерго",
+  "Metro C&C": "Metro C&amp;C",
+
+  "Manual": "Руководство по эксплуатации",
+  "Cascade regulation": "Каскадное регулирование",
+  "Frequency regulation": "Частотное регулирование",
+  "Download": "Скачать",
+
+  "Licenses": "Лицензии",
+  "License": "Лицензия",
+  "Quality certificates": "Сертификаты качества",
+  "SRO certificate": "Свидетельство СРО",
+  "MOE license": "Лицензия МЧС",
+  "Sanitary-epidemiological conclusion": "санитарно-эпидемиологическое заключение",
+  "Declaration of conformity": "Декларация о соответствии",
+  "Certificate of partnership": "Свидетельство о партнерстве",
+  "Certificate of conformity": "Сертификат соответствия",
+
+  "Fire control cabinet": "Пожарный шкаф управления",
+  "Fire pumping station": "Пожарная насосная станция",
+
+  "Water treatments": "Водоподготовки",
+  "Irrigations": "Орошения (ирригации)",
+  "Fire fightings": "Пожаротушения",
+  "Hot and cold water supply": "Горячее и холодное водоснабжение",
+  "Drainages": "водоотведения",
+  "Expansion modules": "Модули расширения",
+  "Operator panels": "Операторские панели",
+  "Signal repeaters": "Повторители сигналов",
+
+  "Mini": "Мини",
+  "Medium": "Средние",
+  "Big": "Большие",
+
+  "Departments": "Отделы",
+  "Requisites": "Реквизиты",
+
+  "General director's reception": "Приемная генерального директора",
+  "Construction and assembly department": "Строительно-монтажный отдел",
+  "Logistics department": "Отдел материально-технического снабжения",
+  "Sales department": "Отдел продаж",
+  "Marketing and advertising department": "Отдел маркетинга и рекламы",
+  "Estimate and contract department": "сметно-договорной отдел",
+
+  "Main functions": "Основные функции",
+  "Distinctive features": "Отличительные особенности",
+  "Additional options": "Дополнительные опции",
+  "Characteristics": "Характеристики",
+  "Application cases": "Случаи применения",
+  "Other": "Прочее",
+
+  "Office": "Офис",
+  "Storage": "Склад",
+
+  "Year": "Год",
+
+  "Cascading": "Каскадный",
+  "Single-frequency": "Одночастотный",
+  "Multi-frequency": "Мультичастотный",
+  "Standard": "Стандартный",
+  "Floating": "Поплавковый",
+  "Smooth start": "Плавный пуск",
+
+  "Administrative buildings": "Административные здания",
+  "Industrial buildings": "Производственные здания",
+  "Residential buildings": "Жилые здания",
+  "Sewerage systems": "Канализационные системы",
+  "Water intake and drainage systems": "Системы водозабора и водоотведения",
+  "Circular pumping stations": "Циркулярные насосные станции",
+
+  "Bank": "банк",
+  "OKATO": "ОКАТО",
+  "OKPO": "ОКПО",
+  "OGRN": "ОГРН",
+  "BIK": "БИК",
+  "INN\\KPP": "ИНН\\КПП",
+  "p\\n": "р\\сч",
+  "c\\a": "к\\с",
+
+  "Rostov-on-Don": "Ростов-на-Дону",
+
+  "day-of-week": {
+    "short": {
+      "mo": "пн",
+      "fr": "пт"
+    }
+  },
+
+  "city-short-form": "г",
+  "village-short-form": "пос"
+}

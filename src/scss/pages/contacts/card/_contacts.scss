@@ -1,0 +1,7 @@
+.contacts-card-contacts {
+  $item_margin-bottom: rem(12px);
+
+  &__item:not(:last-child) {
+    margin-bottom: $item_margin-bottom;
+  }
+}

@@ -1,0 +1,17 @@
+export default [
+  { id: "danfoss", logo: {} },
+  { id: "grundfos", logo: {} },
+  { id: "lowara", logo: {} },
+  { id: "saer", logo: {} },
+  { id: "wilo", logo: {} },
+  { id: "schneider-electric", logo: {} },
+  { id: "ksb", logo: {} },
+  { id: "siemens", logo: {} },
+  { id: "ebara", logo: {} },
+  { id: "valtec", logo: {} },
+  { id: "cnp", logo: {} },
+  { id: "dkc", logo: {} },
+  { id: "genebre", logo: {} },
+  { id: "calpeda", logo: {} },
+  { id: "enolgas", logo: {} },
+];

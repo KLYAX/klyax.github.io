@@ -1,0 +1,17 @@
+// Шрифты
+
+/*! AnonymousPro  */
+
+@include font-face("AnonymousPro", "/assets/fonts/AnonymousPro/AnonymousPro-Regular", $font-weight-regular);
+@include font-face("AnonymousPro", "/assets/fonts/AnonymousPro/AnonymousPro-Italic", $font-weight-regular, italic);
+@include font-face("AnonymousPro", "/assets/fonts/AnonymousPro/AnonymousPro-Bold", $font-weight-bold);
+@include font-face("AnonymousPro", "/assets/fonts/AnonymousPro/AnonymousPro-BoldItalic", $font-weight-bold, italic);
+
+/*! GLInterstate */
+
+@include font-face("GLInterstate", "/assets/fonts/GLInterstate/GLInterstateRegular", $font-weight-regular);
+@include font-face("GLInterstate", "/assets/fonts/GLInterstate/GLInterstateBold", $font-weight-bold);
+
+/*! TTCommons */
+
+@include font-face("TTCommons", "/assets/fonts/TTCommons/TTCommons-Regular", $font-weight-regular);

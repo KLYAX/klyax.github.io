@@ -1,0 +1,86 @@
+.advantages-slider-slide {
+  $header_margin-bottom: rem(62px);
+  $header_margin-bottom_min-xl: rem(96px);
+
+  $title_text-indent: rem(-6px);
+
+  $body_max-width: 340px;
+  $body_margin-bottom: rem(45px);
+
+  $footer_font-family: $font-family-gl-interstate;
+  $footer_line-height: $line-height-lg;
+  $footer_font-weight: $font-weight-bold;
+  $footer_font-size: rem(22px);
+
+  $title_line-height_min-md: $line-height-none;
+
+  $title_font-size: rem(35px);
+  $title_font-size_min-md: rem(45px);
+  $title_font-size_min-xl: rem(80px);
+
+  $body_max-lg_margin-bottom: rem(45px);
+
+  $footer_max-sm_font-size: rem(18px);
+
+  $text-container-not-last_margin-bottom: rem(24px);
+
+  overflow: hidden;
+
+  &__header {
+    display: none;
+    margin-bottom: $header_margin-bottom;
+  }
+
+  &__title {
+    font-size: $title_font-size;
+  }
+
+  &__text-container:not(:last-child) {
+    margin-bottom: $text-container-not-last_margin-bottom;
+  }
+
+  &__body {
+    max-width: $body_max-width;
+    margin-bottom: $body_margin-bottom;
+    margin-bottom: rem(24px);
+    font-size: rem(18px);
+  }
+
+  &__footer {
+    font-family: $footer_font-family;
+    line-height: $footer_line-height;
+    font-weight: $footer_font-weight;
+    text-transform: uppercase;
+    font-size: $footer_max-sm_font-size;
+  }
+
+  @include media-min(md) {
+    &__title {
+      font-size: $title_font-size_min-md;
+      line-height: $title_line-height_min-md;
+    }
+
+    &__header {
+      display: block;
+    }
+
+    &__footer {
+      font-size: $footer_font-size;
+    }
+
+    &__body {
+      margin-bottom: $body_max-lg_margin-bottom;
+    }
+  }
+
+  @include media-min(xl) {
+    &__header {
+      margin-bottom: $header_margin-bottom_min-xl;
+    }
+
+    &__title {
+      font-size: $title_font-size_min-xl;
+      line-height: $line-height-sm;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.facility-list {
+  @include media-max(lg) {
+    padding: 0;
+  }
+}

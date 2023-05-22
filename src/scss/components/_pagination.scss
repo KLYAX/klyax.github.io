@@ -1,0 +1,43 @@
+.pagination {
+  $page-current_font-size: rem(25px);
+  $page-current_color: $primary-color;
+  $page-current_font-weight: $font-weight-bold;
+
+  $page-total_font-size: rem(20px);
+  $page-total_color: $secondary-color;
+
+  &__inner {
+    display: inline-block;
+    align-items: flex-end;
+  }
+
+  &__current-container {
+    display: inline;
+    overflow: hidden;
+    font-size: $page-current_font-size;
+    color: $page-current_color;
+    transition: $transition-medium-ease;
+
+    &:after {
+      content: "|";
+      font-size: $page-current_font-size;
+    }
+  }
+
+  &__total,
+  &__current,
+  &__current-text {
+    display: inline-flex;
+  }
+
+  &__total-container {
+    font-size: $page-total_font-size;
+    color: $page-total_color;
+    transition: $transition-medium-ease;
+  }
+
+  .light &__current-container,
+  .light &__total-container {
+    color: $theme-light-text-primary-color;
+  }
+}

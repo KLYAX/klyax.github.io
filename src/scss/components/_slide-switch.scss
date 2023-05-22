@@ -1,0 +1,154 @@
+// Элементы управления слайдером
+
+.slide-switch {
+  $this: &;
+
+  $button_size: rem(35px);
+  $button_min-xl_size: rem(20px);
+  $button_border-width: rem(1px);
+  $button_border-color: $color-gray-l-77;
+  $button_border-radius: rem(2px);
+  $button_color: $color-gray-l-23;
+  $button_transition: $transition-medium-ease;
+  $button_margin-right: rem(6px);
+
+  $button-disabled_color: $color-gray-l-77;
+
+  $button-hover_background-color: $button_color;
+  $button-hover_color: $color-white;
+
+  $button-icon_width: rem(12px);
+  $button-icon_height: rem(15px);
+
+  $button-icon_width_min-xl: rem(5.5px);
+  $button-icon_height_min-xl: rem(8.5px);
+
+  $timer-container_margin-left: rem(24px);
+
+  $timer_font-family: $font-family-anonymous-pro;
+  $timer_font-size: rem(16px);
+  $timer_line-height: $line-height-sm;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button {
+    display: flex;
+
+    width: $button_size;
+    height: $button_size;
+
+    justify-content: center;
+    align-items: center;
+
+    border: $button_border-width dashed $button_border-color;
+    border-radius: $button_border-radius;
+    color: $button_color;
+    transition: $button_transition;
+
+    &:not(:last-child) {
+      margin-right: $button_margin-right;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:not(&_disabled):hover {
+      background-color: $button-hover_background-color;
+      color: $button-hover_color;
+      border-color: transparent;
+    }
+
+    &_disabled {
+      color: $button-disabled_color;
+      cursor: unset;
+
+      &:active {
+        transform: none;
+      }
+    }
+  }
+
+  &__button-icon {
+    width: $button-icon_width;
+    height: $button-icon_height;
+  }
+
+  &__timer {
+    font-family: $timer_font-family;
+    font-size: $timer_font-size;
+    line-height: $timer_line-height;
+  }
+
+  &__timer-container {
+    margin-left: $timer-container_margin-left;
+    display: flex;
+    align-items: center;
+  }
+
+  @include media-max(md) {
+    &_md_vertical-buttons &__buttons {
+      flex-direction: column;
+
+      #{$this}__button {
+        &:not(:last-child) {
+          margin: 0 0 rem(6px) 0;
+        }
+      }
+
+      #{$this}__button_prev #{$this}__button-icon,
+      #{$this}__button_next #{$this}__button-icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    &_md_hide-timer &__timer-container {
+      display: none;
+      margin-left: 0;
+    }
+  }
+
+  @include media-max(sm) {
+    &_sm_vertical-buttons &__buttons {
+      flex-direction: column;
+
+      #{$this}__button {
+        &:not(:last-child) {
+          margin: 0 0 rem(6px) 0;
+        }
+      }
+
+      #{$this}__button_prev #{$this}__button-icon,
+      #{$this}__button_next #{$this}__button-icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    &_sm_hide-timer &__timer-container {
+      display: none;
+      margin-left: 0;
+    }
+  }
+
+  @include media-min(xl) {
+    &__button {
+      width: $button_min-xl_size;
+      height: $button_min-xl_size;
+    }
+
+    &__button-icon {
+      width: $button-icon_width_min-xl;
+      height: $button-icon_height_min-xl;
+    }
+  }
+}

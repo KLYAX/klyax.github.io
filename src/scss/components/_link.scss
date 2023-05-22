@@ -1,0 +1,112 @@
+.link {
+  $this_font-family: $font-family-anonymous-pro;
+  $this_line-height: $line-height-lg;
+  $this_color: $primary-color;
+  $this_font-weight: $font-weight-bold;
+
+  $nav_font-size: rem(16px);
+  $nav_font-family: $font-family-anonymous-pro;
+  $nav_font-weight: $font-weight-bold;
+
+  $primary_font-family: $font-family-anonymous-pro;
+
+  $accent_font-weight: $font-weight-bold;
+
+  $normal_font-size: rem(20px);
+  $normal_min-lg_font-size: rem(25px);
+
+  $caption_font-size: rem(15px);
+  $caption_font-weight: $font-weight-regular;
+  $caption_line-height: $line-height-sm;
+  $caption_font-family: $font-family-anonymous-pro;
+
+  $link-arrow-icon_offset: 0.165em;
+
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+
+  &__arrow-icon {
+    display: inline-block;
+
+    top: 0;
+    right: 0;
+
+    // backface-visibility: hidden;
+
+    // will-change: top, right;
+    transition: all 0.3s ease-in-out;
+
+    // will-change: top, right, margin;
+  }
+
+  &_with-arrow-icon-and-overflow:hover &__arrow-icon {
+    $link-arrow-bold_margin-bottom: $link-arrow-icon_offset + $icon-link-arrow-up-bold_margin-bottom;
+    $link-arrow_margin-bottom: $link-arrow-icon_offset;
+    $link-arrow_margin-left: $link-arrow-icon_offset + $icon-link-arrow-up-bold_margin-left;
+
+    margin-bottom: $link-arrow_margin-bottom;
+    margin-left: $link-arrow_margin-left;
+
+    &.icon_link-arrow-up-bold {
+      margin-bottom: $link-arrow-bold_margin-bottom;
+    }
+
+    // transform: translate3d(
+    //   $link-arrow_translate-left-and-bottom,
+    //   -$link-arrow_translate-left-and-bottom,
+    //   0
+    // );
+    // transform: translate3d(calc(14% + 0.5px), calc(-14% - 0.5px), 0);
+  }
+
+  &_with-arrow-icon:hover &__arrow-icon {
+    transform: translate($link-arrow-icon_offset, -$link-arrow-icon_offset);
+    // top: -$link-arrow-icon_offset;
+    // right: -$link-arrow-icon_offset;
+  }
+
+  &_nav {
+    font-size: $nav_font-size;
+    font-family: $nav_font-family;
+    font-weight: $nav_font-weight;
+
+    .light & {
+      color: $theme-light-text-primary-color;
+    }
+  }
+
+  &_primary {
+    font-family: $primary_font-family;
+  }
+
+  &_accent {
+    font-weight: $accent_font-weight;
+  }
+
+  &_nowrap {
+    white-space: nowrap;
+  }
+
+  &_caption {
+    font-size: $caption_font-size;
+    font-weight: $caption_font-weight;
+    line-height: $caption_line-height;
+  }
+
+  &_normal {
+    font-size: $normal_font-size;
+  }
+
+  &_hover-underline {
+    position: relative;
+
+    @include hover-underline;
+  }
+
+  @include media-min(lg) {
+    &_normal {
+      font-size: $normal_min-lg_font-size;
+    }
+  }
+}

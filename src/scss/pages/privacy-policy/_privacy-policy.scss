@@ -1,0 +1,24 @@
+.privacy-policy {
+  &__container {
+    padding-bottom: rem(60px);
+  }
+
+  &__header-container {
+    padding-bottom: 0;
+  }
+
+  &__header {
+    margin-bottom: rem(95px);
+  }
+
+  @include media-min(md) {
+    &__header {
+      margin-bottom: rem(100px);
+    }
+  }
+  // @include media-min(xxl) {
+  //   &__header {
+  //     margin-bottom: rem(1px);
+  //   }
+  // }
+}

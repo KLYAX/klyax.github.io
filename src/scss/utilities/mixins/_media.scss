@@ -1,0 +1,36 @@
+// создает media query с шириной больше чем $breakpoint
+@mixin media-min($breakpoint) {
+  @if type-of($breakpoint) == string {
+    $breakpoint: map-get($min-breakpoints, $breakpoint);
+  }
+
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// создает media query с шириной меньше чем $breakpoint
+@mixin media-max($breakpoint) {
+  @if type-of($breakpoint) == string {
+    $breakpoint: map-get($max-breakpoints, $breakpoint);
+  }
+
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// создает media query с шириной больше чем $min-breakpoint и больше чем $man-breakpoint
+@mixin media-between($min-breakpoint, $max-breakpoint) {
+  @if type-of($min-breakpoint) == string {
+    $min-breakpoint: map-get($min-breakpoints, $min-breakpoint);
+  }
+
+  @if type-of($max-breakpoint) == string {
+    $max-breakpoint: map-get($max-breakpoints, $max-breakpoint);
+  }
+
+  @media (min-width: $min-breakpoint) and (max-width: $max-breakpoint) {
+    @content;
+  }
+}

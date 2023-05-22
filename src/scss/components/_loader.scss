@@ -1,0 +1,49 @@
+.loader {
+  $line_height: rem(12px);
+  $line_count: 3;
+  $line_width: rem(5px);
+  $line_gap: rem(7px);
+  $line_background-color: $primary-color;
+
+  $this_height: $line_height * $line_count;
+
+  height: $this_height;
+  display: inline-flex;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__line {
+    display: block;
+    width: $line_width;
+    height: $line_height;
+    background-color: $line_background-color;
+
+    animation-name: slider-line-move;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+
+    &:not(:last-child) {
+      margin-right: $line_gap;
+    }
+  }
+
+  @keyframes slider-line-move {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY($this_height - $line_height);
+    }
+  }
+
+  @for $i from 1 through $line_count {
+    &__line:nth-child(#{$i}) {
+      animation-delay: 0.2s * $i;
+    }
+  }
+}

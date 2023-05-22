@@ -1,0 +1,18 @@
+.menu-contact {
+  $this_margin-bottom: rem(10px);
+
+  $link_font-size: rem(18px);
+  $link_color: $primary-color;
+
+  &:not(:last-child) {
+    margin-bottom: $this_margin-bottom;
+  }
+
+  &__link {
+    font-size: $link_font-size;
+  }
+
+  .light &__link {
+    color: $link_color;
+  }
+}

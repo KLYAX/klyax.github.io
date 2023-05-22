@@ -1,0 +1,109 @@
+.facility-about {
+  $this_padding-bottom: rem(120px);
+  $this_padding-bottom_min-xl: rem(130px);
+
+  $group_padding-top: rem(50px);
+  $group_padding-top_min-md: rem(80px);
+
+  $group_padding-bottom: rem(70px);
+
+  $header_margin-bottom: rem(35px);
+
+  $main-next-el_margin-top: rem(63px);
+
+  $title_font-size: rem(20px);
+  $title_font-family: $font-family-gl-interstate;
+  $title_font-weight: $font-weight-regular;
+  $title_line-height: $line-height-sm;
+
+  $list_font-size: rem(18px);
+  $list_font-size_min-xl: rem(17px);
+
+  $list-item_margin-bottom: rem(13px);
+
+  $image_height: rem(180px);
+  $image_height_min-md: rem(210px);
+  $image_height_min-xl: rem(245px);
+
+  $text_font-size: rem(18px);
+  $text_font-size_min-md: rem(17px);
+
+  padding-bottom: $this_padding-bottom;
+
+  &__group {
+    padding: $group_padding-top 0 $group_padding-bottom;
+
+    &:not(:last-child) {
+      box-shadow: $block-divider_shadow-border-bottom;
+    }
+  }
+
+  &__group-inner {
+    align-items: flex-start;
+  }
+
+  &__header {
+    margin-bottom: $header_margin-bottom;
+  }
+
+  &__main + * {
+    margin-top: $main-next-el_margin-top;
+  }
+
+  &__title {
+    font-size: $title_font-size;
+    font-family: $title_font-family;
+    font-weight: $title_font-weight;
+    line-height: $title_line-height;
+  }
+
+  &__list {
+    font-size: $list_font-size;
+  }
+
+  &__list .list__item:not(:last-child) {
+    margin-bottom: $list-item_margin-bottom;
+  }
+
+  &__image {
+    height: $image_height;
+  }
+
+  &__text {
+    font-size: $text_font-size;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 1.4em;
+  }
+
+  @include media-min(md) {
+    &__header {
+      margin-bottom: 0;
+    }
+
+    &__group {
+      padding-top: $group_padding-top_min-md;
+    }
+
+    &__image {
+      height: $image_height_min-md;
+    }
+
+    &__text {
+      font-size: $text_font-size_min-md;
+    }
+  }
+
+  @include media-min(xl) {
+    padding-bottom: $this_padding-bottom_min-xl;
+
+    &__list {
+      font-size: $list_font-size_min-xl;
+    }
+
+    &__image {
+      height: $image_height_min-xl;
+    }
+  }
+}

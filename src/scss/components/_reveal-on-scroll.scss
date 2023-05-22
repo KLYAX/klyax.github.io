@@ -1,0 +1,20 @@
+.reveal-on-scroll {
+  &_type-slide-out-up {
+    animation-name: revealOnScrollSlideOutUp;
+    animation-timing-function: ease-out;
+  }
+
+  &_speed-medium {
+    animation-duration: 400ms;
+  }
+}
+
+@keyframes revealOnScrollSlideOutUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

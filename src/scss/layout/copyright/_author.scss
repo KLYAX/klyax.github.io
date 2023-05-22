@@ -1,0 +1,36 @@
+.copyright-author {
+  // variables
+  $link_color: $color-gray-chateau;
+  $link_font-size: rem(15px);
+  $link_font-family: $font-family-anonymous-pro;
+  $link_line-height: 1.24;
+
+  // styles
+  &__link {
+    display: inline-flex;
+
+    text-decoration: none;
+    white-space: pre-wrap;
+
+    color: $link_color;
+    font-size: $link_font-size;
+    font-family: $link_font-family;
+    line-height: $link_line-height;
+  }
+
+  &__link-made-in {
+    margin-bottom: em(3px);
+  }
+
+  @include media-min(xs) {
+    &__link {
+      flex-direction: column;
+    }
+  }
+
+  @include media-min(md) {
+    &__link {
+      flex-direction: row;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+// Шапка
+
+$header_height: rem(50px);
+$header_background-color: transparentize($color-gray-l-95, 0.06);
+$header_background-blur: 4px;
+
+.header {
+  $this: &;
+  $this_height: $header-height;
+  $this_background-color: $header_background-color;
+  $this_background-blur: $header_background-blur;
+
+  $this_z-index: 150;
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: $this_height;
+
+  z-index: $this_z-index;
+
+  background-color: $this_background-color;
+  backdrop-filter: blur($this_background-blur);
+
+  transition: background-color 0.4s, backdrop-filter 0.4s;
+
+  &:before {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: $block-divider_weight;
+    background-color: $block-divider_color;
+
+    transform-origin: center;
+  }
+
+  &.theme_changing {
+    &,
+    &:before {
+      transition-duration: 1s;
+      transition-property: background-color, backdrop-filter;
+    }
+
+    #{$this}__link {
+      transition: all 1s;
+    }
+  }
+
+  &:before,
+  &__logo,
+  &__contact,
+  &__menu-toggle {
+    transition: all 0.4s;
+  }
+
+  &:not(:hover).theme {
+    &_light {
+      background-color: transparent;
+      backdrop-filter: blur(0);
+
+      &:before {
+        background-color: transparent;
+      }
+    }
+
+    &_changing {
+      &,
+      &:before {
+        transition-duration: 1s;
+        transition-property: background-color, backdrop-filter;
+      }
+
+      #{$this}__logo,
+      #{$this}__contact,
+      #{$this}__menu-toggle {
+        transition: all 1s;
+      }
+    }
+
+    &_light #{$this}__link {
+      color: $theme-light-text-secondary-color;
+
+      &.active,
+      &:hover {
+        color: $theme-light-text-primary-color;
+      }
+    }
+
+    &_light #{$this}__link:after {
+      background-color: $theme-light-primary-color;
+    }
+
+    &_light #{$this}__logo,
+    &_light #{$this}__contact,
+    &_light #{$this}__menu-toggle {
+      color: $theme-light-text-primary-color;
+    }
+  }
+
+  &__scroll-progress {
+    z-index: -1;
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__inner {
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+}

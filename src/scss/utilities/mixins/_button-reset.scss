@@ -1,0 +1,15 @@
+// сбрасывает дефолтные стили кнопки
+@mixin button-reset {
+  width: auto;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+
+  background-color: transparent;
+}

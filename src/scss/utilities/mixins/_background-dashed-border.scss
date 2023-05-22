@@ -1,0 +1,18 @@
+@mixin background-dashed-border(
+  $weight: 1px,
+  $color: #000,
+  $dash-width: 2px,
+  $dash-space-between: 1px,
+  $positions: null
+) {
+  background: linear-gradient(180deg, $color, $color $dash-width, transparent 0),
+    linear-gradient(90deg, $color, $color $dash-width, transparent 0);
+
+  background-size: $weight ($dash-width + $dash-space-between),
+    ($dash-width + $dash-space-between) $weight;
+  background-repeat: repeat-y, repeat-x;
+
+  @if ($positions) {
+    background-position: $positions;
+  }
+}

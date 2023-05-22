@@ -1,0 +1,41 @@
+// Ссылка
+
+$control-cabinets-description-download-link_padding-y: rem(5px);
+
+.control-cabinets-description-download-link {
+  $this_padding: $control-cabinets-description-download-link_padding-y;
+  $this_color: $color-gray-l-26;
+  $this_line-height: $line-height-none;
+
+  $icon_margin-left: rem(4px);
+
+  display: inline-block;
+  padding: $this_padding 0;
+  text-decoration: none;
+  color: $this_color;
+  line-height: $this_line-height;
+
+  &:active .download-icon__arrow,
+  &:hover .download-icon__arrow {
+    animation-name: download-icon-point-down;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.32, 0.86, 0.56, 1.46);
+
+    @keyframes download-icon-point-down {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY($download-icon-arrow_translate-y-to-bottom);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__icon {
+    margin-left: $icon_margin-left;
+  }
+}

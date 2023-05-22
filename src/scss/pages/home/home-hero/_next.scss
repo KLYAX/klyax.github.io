@@ -1,0 +1,42 @@
+.home-hero-next {
+  $direction-container_margin-right: rem(9px);
+  $direction-container_flex-basis: rem(65px);
+
+  white-space: nowrap;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__direction-label,
+  &__button-label {
+    display: inline-block;
+  }
+
+  &__direction {
+    display: inline-block;
+    transition: $theme-text-color-transition;
+
+    .light & {
+      color: $theme-light-text-secondary-color;
+    }
+  }
+
+  &__direction-container {
+    margin-right: $direction-container_margin-right;
+    flex: 0 0 $direction-container_flex-basis;
+    text-align: right;
+  }
+
+  &__link-icon {
+    transform: rotate(90deg);
+  }
+
+  &__button {
+    font-weight: $font-weight-bold;
+
+    &_active {
+      display: block;
+    }
+  }
+}

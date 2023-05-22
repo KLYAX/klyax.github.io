@@ -1,0 +1,33 @@
+/**
+ * Создает линию с цветом $color, с жирностью $weight и с анимацией $transition,
+ * при наведении на элемент к которому был применен миксин
+ **/
+@mixin hover-underline(
+  $color: $color-gray-l-23,
+  $weight: 2px,
+  $transition: all 0.35s cubic-bezier(0.87, 0, 0.13, 1)
+) {
+  &:after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: $weight;
+
+    background-color: $color;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: $transition;
+    will-change: transform;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+  }
+}

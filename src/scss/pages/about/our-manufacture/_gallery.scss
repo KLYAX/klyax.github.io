@@ -1,0 +1,26 @@
+.our-manufacture-gallery {
+  $item_gap: rem(12px);
+  $item_gap-half: $item_gap / 2;
+
+  $image_height: rem(200px);
+  $image_height_min-xl: rem(456px);
+
+  margin: -$item_gap-half;
+
+  &__item {
+    padding: $item_gap-half;
+  }
+
+  &__image {
+    width: 100%;
+    height: $image_height;
+
+    object-fit: cover;
+  }
+
+  @include media-min(xl) {
+    &__image {
+      height: $image_height_min-xl;
+    }
+  }
+}

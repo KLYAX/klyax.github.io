@@ -1,0 +1,120 @@
+.preloader-logo {
+  $icon-rect_size: rem(30px);
+  $icon-rect_size_min-md: rem(54px);
+
+  $icon-rect_border-radius: rem(4px);
+  $icon-rect_border-radius_min-md: rem(8px);
+
+  $icon-rect_background-color: $primary-color;
+
+  $icon-globus_size: rem(55px);
+  $icon-globus_size_min-md: rem(100px);
+
+  $text_font-size: rem(34px);
+  $text_font-size_min-md: rem(60px);
+
+  $text_font-family: $font-family-gl-interstate;
+  $text_font-weight: $font-weight-bold;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  user-select: none;
+
+  &__icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icon-rects {
+    position: relative;
+
+    width: $icon-rect_size;
+    height: $icon-rect_size;
+
+    transform: rotate(45deg);
+  }
+
+  &__icon-rect {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon-rect,
+  &__icon-rect-inner {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon-rect {
+    &_top-right {
+      transform: rotate(90deg);
+    }
+
+    &_bottom-right {
+      transform: rotate(180deg);
+    }
+
+    &_bottom-left {
+      transform: rotate(270deg);
+    }
+  }
+
+  &__icon-rect-inner {
+    border-radius: $icon-rect_border-radius;
+
+    transform-origin: center;
+
+    background-color: $icon-rect_background-color;
+
+    transform: translate(-100%, -100%);
+  }
+
+  &__icon-globus {
+    position: absolute;
+
+    bottom: -90%;
+
+    left: -50%;
+    right: -50%;
+    margin: 0 auto;
+
+    width: $icon-globus_size;
+    height: $icon-globus_size;
+  }
+
+  &__text {
+    font-size: $text_font-size;
+    font-family: $text_font-family;
+    font-weight: $text_font-weight;
+    text-transform: uppercase;
+  }
+
+  @include media-min(md) {
+    &__icon-rects {
+      width: $icon-rect_size_min-md;
+      height: $icon-rect_size_min-md;
+    }
+
+    &__icon-rect-inner {
+      border-radius: $icon-rect_border-radius_min-md;
+    }
+
+    &__text {
+      font-size: $text_font-size_min-md;
+    }
+
+    &__icon-globus {
+      width: $icon-globus_size_min-md;
+      height: $icon-globus_size_min-md;
+    }
+  }
+}

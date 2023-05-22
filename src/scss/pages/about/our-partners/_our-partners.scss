@@ -1,0 +1,68 @@
+.our-partners {
+  $this_padding-top: rem(75px);
+  $this_padding-top_min-md: rem(90px);
+  $this_padding-top_min-xl: rem(110px);
+
+  $this_padding-bottom: rem(75px);
+  $this_padding-bottom_min-md: rem(100px);
+  $this_padding-bottom_min-xl: rem(80px);
+
+  $body_margin-top: rem(95px);
+  $body_margin-top_min-md: rem(80px);
+  $body_margin-top_min-xl: 0;
+
+  $caption_font-size: rem(17px);
+
+  $header_margin-bottom_max-xs: rem(40px);
+  $header_margin-bottom_min-xl: rem(70px);
+
+  padding: $this_padding-top 0 $this_padding-bottom;
+
+  &__body {
+    margin-top: $body_margin-top;
+  }
+
+  &__caption {
+    font-size: $caption_font-size;
+  }
+
+  &__title {
+    white-space: pre;
+  }
+
+  @include media-max(xs) {
+    &__subheader,
+    &__header {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    &__header {
+      margin-bottom: $header_margin-bottom_max-xs;
+    }
+  }
+
+  @include media-min(md) {
+    padding: $this_padding-top_min-md 0 $this_padding-bottom_min-md;
+
+    &__body {
+      margin-top: $body_margin-top_min-md;
+    }
+  }
+
+  @include media-min(xl) {
+    padding: $this_padding-top_min-xl 0 $this_padding-bottom_min-xl;
+
+    &__body {
+      margin-top: $body_margin-top_min-xl;
+    }
+
+    &__header {
+      margin-bottom: $header_margin-bottom_min-xl;
+    }
+
+    &__title {
+      white-space: normal;
+    }
+  }
+}

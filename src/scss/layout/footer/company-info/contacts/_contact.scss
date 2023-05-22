@@ -1,0 +1,17 @@
+.footer-company-info-contacts-contact {
+  $link_padding-bottom: rem(4px);
+
+  @include media-max(xl) {
+    & + & {
+      margin-top: rem(20px);
+    }
+  }
+
+  &__link {
+    @include media-min(xl) {
+      @include hover-underline;
+
+      padding-bottom: $link_padding-bottom;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.control-cabinets-description-header {
+  $text_max-width: rem(265px);
+  $text_margin-right: rem(15px);
+
+  $text_max-xxl_margin-left: rem(35px);
+  $text_max-md_margin-bottom: rem(25px);
+  $text_max-sm_margin-bottom: rem(35px);
+
+  $title_max-md_margin-bottom: rem(25px);
+
+  $list_max-xl_margin-left: rem(30px);
+
+  overflow: hidden;
+
+  &__title {
+    overflow: hidden;
+
+    margin-bottom: $title_max-md_margin-bottom;
+  }
+
+  &__title-text {
+    display: block;
+  }
+
+  &__text {
+    margin-bottom: $text_max-sm_margin-bottom;
+    text-transform: lowercase;
+  }
+
+  &__text p:not(:last-child) {
+    margin-bottom: 1.1em;
+  }
+
+  @include media-min(sm) {
+    &__text {
+      margin-bottom: 0;
+      // max-width: $text_max-width;
+      // margin: 0 $text_margin-right 0 0;
+    }
+  }
+
+  @include media-min(lg) {
+    // &__title {
+    //   margin-bottom: 0;
+    // }
+
+    &__text {
+      max-width: none;
+    }
+  }
+
+  @include media-min(xl) {
+    &__text {
+      // max-width: 80%;
+    }
+  }
+
+  @include media-min(1700px) {
+    &__text {
+      max-width: none;
+    }
+  }
+
+  @include media-max(xl) {
+    &__List {
+      margin-left: $list_max-xl_margin-left;
+    }
+  }
+
+  @include media-max(sm) {
+    &__List {
+      margin-left: 0;
+    }
+  }
+}

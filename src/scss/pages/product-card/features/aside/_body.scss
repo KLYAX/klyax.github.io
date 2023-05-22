@@ -1,0 +1,5 @@
+.features-aside-body {
+  @include media-max(sm) {
+    display: none;
+  }
+}

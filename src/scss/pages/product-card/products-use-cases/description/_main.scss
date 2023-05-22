@@ -1,0 +1,31 @@
+.products-use-cases-description-main {
+  $this_max-sm_margin-bottom: rem(36px);
+
+  $text_margin-right: rem(40px);
+  $text_max-width: 300px;
+
+  $text_max-sm_font-size: rem(14px);
+  $text_max-sm_color: $color-gray-l-51;
+
+  @include media-max(sm) {
+    margin-bottom: $this_max-sm_margin-bottom;
+  }
+
+  &__text {
+    font-size: $text_max-sm_font-size;
+    color: $text_max-sm_color;
+  }
+
+  @include media-min(sm) {
+    max-width: $text_max-width;
+  }
+
+  @include media-min(xl) {
+    max-width: none;
+    // margin-right: $text_margin-right;
+  }
+
+  @include media-min(1500px) {
+    max-width: none;
+  }
+}

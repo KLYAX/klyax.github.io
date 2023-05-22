@@ -1,0 +1,106 @@
+.product-nav {
+  $main_padding-top: $header_height + rem(42px);
+  $main_min-md_padding-top: $header_height + rem(51px);
+  $main_min-xl_padding-top: $header_height + rem(45px);
+
+  $main_padding-bottom: rem(95px);
+  $main_background-color: $background-color-base;
+
+  $section_min-md_padding: rem(5px);
+  $section_margin-bottom: rem(58px);
+  $section_min-md_margin-bottom: rem(72px);
+
+  $sections_min-md_margin-x: -($section_min-md_padding);
+
+  $header_margin-bottom: rem(57px);
+  $header_min-md_margin-bottom: rem(81px);
+
+  $background_background-color: rgba(0, 0, 0, 0.5);
+
+  $hide_transition: $transition-medium-ease;
+
+  &_portable {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: $hide_transition;
+    visibility: hidden;
+    opacity: 0;
+    // убираем события при наведении так как после того как навигация пропадает, есть возможность опять активировать ее при наведении на область где она была
+    pointer-events: none;
+  }
+
+  .nav__item:hover &_portable {
+    visibility: visible;
+    opacity: 1;
+    // возвращаем события при наведении так как нам больше не нужно прятать меню при наведении на него, так как оно в активном состоянии
+    pointer-events: unset;
+  }
+
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    // при наведении на этот элемент отключаем hover у элемента через который была активирована навигация
+    pointer-events: none;
+    background-color: $background_background-color;
+  }
+
+  &__sections {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__section:not(:last-child) {
+    margin-bottom: $section_margin-bottom;
+  }
+
+  &__header {
+    margin-bottom: $header_margin-bottom;
+  }
+
+  &__main {
+    padding-top: $main_padding-top;
+    padding-bottom: $main_padding-bottom;
+    background-color: $main_background-color;
+  }
+
+  @include media-min(md) {
+    &__main {
+      padding-top: $main_min-md_padding-top;
+    }
+
+    &__header {
+      margin-bottom: $header_min-md_margin-bottom;
+    }
+
+    &__section {
+      margin-bottom: $section_min-md_margin-bottom;
+      padding: 0 $section_min-md_padding;
+    }
+
+    &__sections {
+      margin: 0 $sections_min-md_margin-x;
+    }
+  }
+
+  @include media-min(xl) {
+    &__main {
+      padding-top: $main_min-xl_padding-top;
+    }
+
+    &__header {
+      display: none;
+    }
+
+    &__section {
+      margin-bottom: 0;
+    }
+  }
+}

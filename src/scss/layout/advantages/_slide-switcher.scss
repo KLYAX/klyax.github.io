@@ -1,0 +1,10 @@
+.advantages-slide-switcher {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  @include media-min(sm) {
+    justify-content: flex-start;
+  }
+}

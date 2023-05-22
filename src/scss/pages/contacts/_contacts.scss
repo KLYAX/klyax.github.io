@@ -1,0 +1,85 @@
+.contacts {
+  $main_margin-bottom: rem(115px) - $contacts-main-item_margin-bottom;
+  $main_min-md_margin-bottom: rem(115px) - $contacts-main-item_min-md_margin-bottom;
+  $main_margin-bottom_min-xl: 0;
+
+  $tabs_margin-bottom: rem(110px);
+  $tabs_min-md_margin-bottom: rem(133px) - $contacts-requisites-item_min-md_margin-bottom;
+  $tabs_min-xl_margin-bottom: rem(175px) - $contacts-requisites-item_min-xl_margin-bottom;
+
+  $cards_min-md_margin-bottom: rem(104px);
+  $cards_min-xl_margin-bottom: 0;
+
+  $section-hero-header-container_padding-bottom_min-md: rem(74px);
+  $section-hero-header-container_padding-bottom_min-xl: rem(138px);
+
+  &__main {
+    margin-bottom: $main_margin-bottom;
+  }
+
+  &__tabs {
+    margin-bottom: $tabs_margin-bottom;
+  }
+
+  &__cards-and-main &__main {
+    display: none;
+  }
+
+  @include media-min(md) {
+    &__tabs .tabs__header {
+      display: none;
+    }
+    &__main {
+      margin-bottom: $main_min-md_margin-bottom;
+    }
+
+    &__cards-container {
+      margin-bottom: $cards_min-md_margin-bottom;
+    }
+
+    &__tabs {
+      margin-bottom: $tabs_min-md_margin-bottom;
+    }
+
+    .tabs__content {
+      display: block;
+    }
+
+    .section-hero-header {
+      &__container {
+        padding-bottom: $section-hero-header-container_padding-bottom_min-md;
+      }
+    }
+  }
+
+  @include media-min(lg) {
+    &__tabs {
+      margin-bottom: $tabs_min-xl_margin-bottom;
+    }
+
+    &__cards-container {
+      margin-bottom: $cards_min-xl_margin-bottom;
+    }
+
+    &__main {
+      margin-bottom: $main_margin-bottom_min-xl;
+      display: none;
+    }
+
+    &__cards-and-main &__main {
+      display: block;
+    }
+
+    .tabs__content + .tabs__content {
+      margin-top: rem(150px);
+    }
+  }
+
+  @include media-min(xl) {
+    .section-hero-header {
+      &__container {
+        padding-bottom: $section-hero-header-container_padding-bottom_min-xl;
+      }
+    }
+  }
+}

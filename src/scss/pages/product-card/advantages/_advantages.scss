@@ -1,0 +1,89 @@
+// .advantages {
+//   $this_padding: rem(120px) 0 rem(225px) 0;
+
+//   $left_width: percentage(439px / 1360px);
+//   $left_margin-right: rem(15px);
+
+//   $right_width: percentage(906px / 1360px);
+
+//   $header_margin-bottom: rem(75px);
+
+//   $slide-switcher_margin-bottom: rem(50px);
+
+//   $this_max-xl_padding-bottom: rem(142px);
+//   $this_max-sm_padding: rem(60px) 0 rem(94px);
+
+//   $header_max-sm_margin-bottom: rem(45px);
+
+//   padding: $this_padding;
+
+//   @include media-max(xl) {
+//     padding-bottom: $this_max-xl_padding-bottom;
+//   }
+
+//   @include media-max(sm) {
+//     padding: $this_max-sm_padding;
+//   }
+
+//   &__aside {
+//     @include media-max(sm) {
+//       margin-bottom: rem(58px);
+//     }
+//   }
+
+//   &__header {
+//     margin-bottom: $header_margin-bottom;
+//     display: none;
+
+//     @include media-max(lg) {
+//       display: block;
+//     }
+
+//     @include media-max(sm) {
+//       margin-bottom: $header_max-sm_margin-bottom;
+//     }
+//   }
+
+//   &__title {
+//     @include media-max(sm) {
+//       br {
+//         display: none;
+//       }
+//     }
+//   }
+
+//   &__slide-switcher {
+//     margin-bottom: $slide-switcher_margin-bottom;
+
+//     @include media-max(lg) {
+//       margin-bottom: rem(63px);
+//     }
+
+//     @include media-max(sm) {
+//       margin-bottom: 0;
+//     }
+//   }
+// }
+
+.product-advantages {
+  $advantages-slider-slide-text_font-size: rem(18px);
+  $advantages-slider-slide-text_font-size_min-xl: rem(16px);
+
+  padding-bottom: rem(95px);
+
+  .advantages-slider-slide__text {
+    font-size: $advantages-slider-slide-text_font-size;
+  }
+
+  @include media-min(md) {
+    padding-bottom: rem(140px);
+  }
+
+  @include media-min(xl) {
+    padding-bottom: rem(150px);
+
+    .advantages-slider-slide__text {
+      font-size: $advantages-slider-slide-text_font-size_min-xl;
+    }
+  }
+}

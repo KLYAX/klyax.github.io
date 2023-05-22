@@ -1,0 +1,13 @@
+.manufacture-description {
+  @include media-max(sm) {
+    margin-bottom: rem(32px);
+  }
+
+  &__text {
+    font-size: rem(16px);
+
+    @include media-max(xl) {
+      font-size: rem(17px);
+    }
+  }
+}

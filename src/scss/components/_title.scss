@@ -1,0 +1,131 @@
+// Заголовок
+
+$title-font-family: $font-family-gl-interstate;
+$title-line-height: $line-height-sm;
+$title-font-weight: $font-weight-bold;
+$title-xl: rem(80px);
+$title-lg: rem(36px);
+$title-md: rem(26px);
+$title-sm: rem(25px);
+$title-xs: rem(22px);
+
+$title-section-main_font-size: rem(40px);
+
+.title {
+  $this: &;
+
+  $this_font-family: $font-family-gl-interstate;
+  $this_margin-left: -0.05em;
+  $this_font-weight: $font-weight-bold;
+
+  $shrink_letter-spacing: -0.03em;
+  $shrink_line-height: $line-height-xs;
+
+  $hero_font-size: rem(28px);
+  $hero_font-size_min-md: rem(30px);
+  $hero_font-size_min-xl: rem(36px);
+
+  $hero_line-height: $line-height-sm;
+  $hero_letter-spacing: -0.03em;
+
+  $hero-main_font-size: rem(70px);
+  $hero-main_line-height: $line-height-xs;
+
+  $hero-main_line-height_min-xl: $line-height-xs;
+
+  $hero-main_font-size_max-sm: rem(30px);
+  $hero-main_font-size_max-lg: rem(60px);
+
+  $section-primary_font-size: rem(28px);
+  $section-primary_font-size_min-md: rem(30px);
+  $section-primary_font-size_min-xl: rem(40px);
+
+  $section-primary_line-height: $line-height-xs;
+  $section-primary_letter-spacing: $shrink_letter-spacing;
+
+  $section-secondary_font-size: rem(22px);
+  $section-secondary_font-size_min-md: rem(26px);
+
+  $section-secondary_line-height: $line-height-sm;
+
+  margin-left: $this_margin-left;
+  font-family: $this_font-family;
+  font-weight: $this_font-weight;
+
+  &_xl {
+    font-size: $title-xl;
+  }
+
+  &_lg {
+    font-size: $title-lg;
+  }
+
+  &_md {
+    font-size: $title-md;
+  }
+
+  &_sm {
+    font-size: $title-sm;
+  }
+
+  &_xs {
+    font-size: $title-xs;
+  }
+
+  &_uppercase {
+    text-transform: uppercase;
+  }
+
+  &_shrink {
+    letter-spacing: $shrink_letter-spacing;
+    line-height: $shrink_line-height;
+  }
+
+  &_hero {
+    line-height: $hero_line-height;
+    font-size: $hero_font-size;
+    text-transform: uppercase;
+    letter-spacing: $hero_letter-spacing;
+
+    &_main {
+      font-size: $hero-main_font-size;
+      line-height: $hero-main_line-height;
+    }
+  }
+
+  &_section_primary {
+    font-size: $section-primary_font-size;
+    line-height: $section-primary_line-height;
+    text-transform: uppercase;
+  }
+
+  &_section_secondary {
+    font-size: $section-secondary_font-size;
+    line-height: $section-secondary_line-height;
+  }
+
+  @include media-min(md) {
+    &_hero {
+      font-size: $hero_font-size_min-md;
+    }
+
+    &_section_primary {
+      font-size: $section-primary_font-size_min-md;
+    }
+
+    &_section_secondary {
+      font-size: $section-secondary_font-size_min-md;
+    }
+  }
+
+  @include media-min(xl) {
+    &_hero {
+      font-size: $hero_font-size_min-xl;
+      line-height: $hero-main_line-height_min-xl;
+    }
+
+    &_section_primary {
+      font-size: $section-primary_font-size_min-xl;
+    }
+  }
+}
